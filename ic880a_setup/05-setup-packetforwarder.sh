@@ -1,10 +1,10 @@
 #!/bin/bash -e
-#title           :04-setup-packetforwarder.sh
+#title           :05-setup-packetforwarder.sh
 #description     :This script installs the packet forwarder and creates its config.
 #author          :cabbage (bernhard@openiot.at)
-#date            :20190224
-#version         :1.0
-#usage           :bash 04-setup-packetforwarder.sh
+#date            :20190317
+#version         :1.1
+#usage           :bash 05-setup-packetforwarder.sh
 #notes           :This script relies very much on the scripting of PiVPN and TTN-Zuerichs Install routine
 #============================================================================================================
 
@@ -184,5 +184,7 @@ esac
 cp ./start.sh $INSTALL_DIR/bin/
 cp ./ttn-gateway.service /lib/systemd/system/
 systemctl enable ttn-gateway.service
+
+gateway_status_dialog
 
 do_reboot

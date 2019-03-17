@@ -19,9 +19,10 @@ apt-get install git --yes || die "GIT installation failed" 1
 apt-get install olsrd --yes || die "OLSRD installation failed" 1
 apt-get install tcpdump --yes || die "TCPDUMP installation failed" 1
 apt-get install mtr-tiny --yes || die "mtr-tiny installation failed" 1
+apt-get install ntp --yes || die "ntp installation failed" 1
 
 # Deinstall physical swap
-#systemctl disable dphys-swapfile
-#apt-get purge dphys-swapfile --yes || die "Deactivating SWAP Failed." 1
+systemctl disable dphys-swapfile
+apt-get purge dphys-swapfile --yes || die "Deactivating SWAP Failed." 1
 
 do_reboot
