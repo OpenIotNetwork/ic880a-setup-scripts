@@ -4,8 +4,8 @@
 The purpose of this project is to support the installation of ic880a based Raspberry Pi TTN gateways for the community OpenIoT.
 
 This has been done for:
-* OpenIoT community - https://www.openiot.network
-* TTN Vienna - https://www.thethingsnetwork.org
+* OpenIoT community - https://openiot.network
+* TTN Vienna - https://www.thethingsnetwork.org/community/vienna/
 
 ## Credits & Thanks to... ##
 Thanks to:
