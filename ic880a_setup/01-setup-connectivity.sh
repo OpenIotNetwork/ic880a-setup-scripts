@@ -22,7 +22,7 @@ raspi-config nonint do_configure_keyboard $layout
 
 # Join Wifi network
 echo 'network={' >> /etc/wpa_supplicant/wpa_supplicant.conf
-echo 'ssid="wlansid"' >> /etc/wpa_supplicant/wpa_supplicant.conf
+echo 'ssid="wlanssid"' >> /etc/wpa_supplicant/wpa_supplicant.conf
 echo 'psk="wlanpassword"' >> /etc/wpa_supplicant/wpa_supplicant.conf
 echo '}' >> /etc/wpa_supplicant/wpa_supplicant.conf
 
