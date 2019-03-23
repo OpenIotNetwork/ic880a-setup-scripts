@@ -27,9 +27,9 @@ GATEWAY_EUI=${GATEWAY_EUI^^} # toupper
 echo "Detected EUI $GATEWAY_EUI from $GATEWAY_EUI_NIC"
 
 # get hostname
-if NEW_HOSTNAME=$(whiptail --title "Choose A Hostname" --inputbox "Host name [ttn-gateway]:" ${r} ${c} 3>&1 1>&2 2>&3)
+if NEW_HOSTNAME=$(whiptail --title "Choose A Hostname" --inputbox "Host name [openiot-gateway]:" ${r} ${c} 3>&1 1>&2 2>&3)
 then
-	if [[ $NEW_HOSTNAME == "" ]]; then NEW_HOSTNAME="ttn-gateway"; fi
+	if [[ $NEW_HOSTNAME == "" ]]; then NEW_HOSTNAME="openiot-gateway"; fi
 else
 	die "User aborted dialog."
 fi
@@ -37,9 +37,9 @@ fi
 are_you_sure "Gateway-Infos"
 
 # get gateway name
-if GATEWAY_NAME=$(whiptail --title "Choose A Gateway Name" --inputbox "Gateway name [ttn-ic880a]:" ${r} ${c} 3>&1 1>&2 2>&3)
+if GATEWAY_NAME=$(whiptail --title "Choose A Gateway Name" --inputbox "Gateway name [openiot-ic880a]:" ${r} ${c} 3>&1 1>&2 2>&3)
 then
-	if [[ $GATEWAY_NAME == "" ]]; then GATEWAY_NAME="ttn-ic880a"; fi
+	if [[ $GATEWAY_NAME == "" ]]; then GATEWAY_NAME="openiot-ic880a"; fi
 else
 	die "User aborted dialog." 1
 fi
@@ -53,17 +53,17 @@ else
 fi
 
 # get latitude
-if GATEWAY_LAT=$(whiptail --title "Choose Gateway Geo-Location." --inputbox "Latitude [0]:" ${r} ${c} 3>&1 1>&2 2>&3)
+if GATEWAY_LAT=$(whiptail --title "Choose Gateway Geo-Location." --inputbox "Latitude [48.0]:" ${r} ${c} 3>&1 1>&2 2>&3)
 then
-	if [[ $GATEWAY_LAT == "" ]]; then GATEWAY_LAT=0; fi
+	if [[ $GATEWAY_LAT == "" ]]; then GATEWAY_LAT=48.0; fi
 else
 	die "User aborted dialog." 1
 fi
 
 # get longitude
-if GATEWAY_LON=$(whiptail --title "Choose Gateway Geo-Location" --inputbox "Longitude [0]:" ${r} ${c} 3>&1 1>&2 2>&3)
+if GATEWAY_LON=$(whiptail --title "Choose Gateway Geo-Location" --inputbox "Longitude [16.0]:" ${r} ${c} 3>&1 1>&2 2>&3)
 then
-	if [[ $GATEWAY_LON == "" ]]; then GATEWAY_LON=0; fi
+	if [[ $GATEWAY_LON == "" ]]; then GATEWAY_LON=16.0; fi
 else
 	die "User aborted dialog." 1
 fi
