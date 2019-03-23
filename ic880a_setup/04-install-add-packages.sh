@@ -2,8 +2,6 @@
 #title           :04-install-add-packages.sh
 #description     :This script installes additional software on your gateways..
 #author          :cabbage (bernhard@openiot.at)
-#date            :20190224
-#version         :1.0
 #usage           :bash 04-install-all-packages.sh
 #notes           :This script relies very much on the scripting of PiVPN and TTN-Zuerichs Install routine
 #============================================================================================================

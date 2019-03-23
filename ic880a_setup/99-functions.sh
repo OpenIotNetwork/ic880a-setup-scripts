@@ -2,8 +2,6 @@
 #title           :99-functions.sh
 #description     :This script contains a set of functions that is used in the other install scripts.
 #author          :cabbage (bernhard@openiot.at)
-#date            :20190316
-#version         :1.1
 #usage           :You should not use this script directly. It is automatically sourced (included) in the other scripts.
 #notes           :This script contains a set of functions that is used in the other install scripts.
 #============================================================================================================

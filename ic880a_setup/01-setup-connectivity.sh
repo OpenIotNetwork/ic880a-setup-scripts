@@ -2,8 +2,6 @@
 #title           :01-setup-connectivity.sh
 #description     :This script sets up the needed users.
 #author          :cabbage (bernhard@openiot.at)
-#date            :20190224
-#version         :1.0
 #usage           :bash 04-setup-packetforwarder.sh
 #notes           :This script relies very much on the scripting of PiVPN and TTN-Zuerichs Install routine
 #============================================================================================================

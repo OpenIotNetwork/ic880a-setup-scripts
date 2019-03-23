@@ -2,8 +2,6 @@
 #title           :05-setup-packetforwarder.sh
 #description     :This script installs the packet forwarder and creates its config.
 #author          :cabbage (bernhard@openiot.at)
-#date            :20190317
-#version         :1.1
 #usage           :bash 05-setup-packetforwarder.sh
 #notes           :This script relies very much on the scripting of PiVPN and TTN-Zuerichs Install routine
 #============================================================================================================
