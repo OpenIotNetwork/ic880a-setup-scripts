@@ -164,17 +164,28 @@ echo "Installation completed."
 # Change the reset PIN to the layout of the adapter platine
 
 CHOICE=$(whiptail --title "What adapter platine are you using?" --radiolist --separate-output "Choose:" 20 78 15 \
-        "Standard" "IMST ic880a + normal (small) adapter platine" on \
-        "ch2i" "IMST ic880a + ch2i (big) adapter platine" off 3>&1 1>&2 2>&3 )
+        "OpenIoT" "IMST ic880a + OpenIoT adapter" on \
+        "ttn-zh" "IMST ic880a + TTN-ZH adapter by gnz.io" off \
+        "ch2i" "IMST ic880a + ch2i adapter" off \
+        "imstlite" "IMST Lite Gateway included adapter" off \
+	3>&1 1>&2 2>&3 )
 
 case $CHOICE in
-                Standard)
-                        echo "IMST ic880a + normal (small) adapter platine"
+                OpenIoT)
+                        echo "IMST ic880a + OpenIoT adapter"
+                        sed -i s/^.*RESET_BCM_PIN=.*$/SX1301_RESET_BCM_PIN=25/g ./start.sh
+                ;;
+                ttn-zh)
+                        echo "IMST ic880a + TTN-ZH adapter by gnz.io"
                         sed -i s/^.*RESET_BCM_PIN=.*$/SX1301_RESET_BCM_PIN=25/g ./start.sh
                 ;;
                 ch2i)
                         echo "IMST ic880a + ch2i (big) adapter platine"
                         sed -i s/^.*RESET_BCM_PIN=.*$/SX1301_RESET_BCM_PIN=17/g ./start.sh
+                ;;
+                imstlite)
+                        echo "IMST Lite Gateway included adapter"
+                        sed -i s/^.*RESET_BCM_PIN=.*$/SX1301_RESET_BCM_PIN=5/g ./start.sh
                 ;;
                 *)
                 ;;
