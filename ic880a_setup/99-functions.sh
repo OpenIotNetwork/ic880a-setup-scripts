@@ -75,7 +75,7 @@ function is_user_exits()
 
 function are_you_sure() 
 {
-	if (whiptail --backtitle "Are you sure you want to go on?" --title "Debug" --yesno "Next step: ${1} - Wanna go on?" ${r} ${c}) then
+	if (whiptail --backtitle "Are you sure you want to continue?" --title "Debug" --yesno "Next step: ${1} - Do you want to continue?" ${r} ${c}) then
 		echo "OK. Let's rock!"
 		return $TRUE
 	else
