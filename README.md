@@ -1,7 +1,7 @@
 # OpenIoT Gateway Installation Scripts
 
 ## Purpose ##
-The purpose of this project is to support the installation of ic880a based Raspberry PI TTN gateways for the community OpenIoT.
+The purpose of this project is to support the installation of ic880a based Raspberry Pi TTN gateways for the community OpenIoT.
 
 This has been done for:
 * OpenIoT community - https://www.openiot.network
@@ -9,8 +9,8 @@ This has been done for:
 
 ## Credits & Thanks to... ##
 Thanks to:
-* TTN Zurich - They did a great job with ther gateway setup tutorial and installation script. As a matter of fact a lot has been copied from their routine. This has two reasons: they did a really great job and we would like to have our gateways being set up from the same baseline.
-* PiVPN - They have the best setup routine I've seen so fare. Therefore I learned a lot and also copied some code from those guys.
+* TTN Zurich - They did a great job with their gateway setup tutorial and installation script. As a matter of fact a lot has been copied from their routines. This has two reasons: they did a really great job and we would like to have our gateways being set up from the same baseline.
+* PiVPN - They have the best setup routine I've seen so far. Therefore I learned a lot and also copied some code from these guys.
 
 # Documentation #
 This documentation should lead you through the installation and setup of your IMST ic880a Raspberry Pi LoRaWAN Gateway.
@@ -24,12 +24,12 @@ https://youtu.be/JZEnr5Lz1-A | Complete installation procedure Part1 (parts that
 https://youtu.be/-a2BNTK87_0 | Complete installation procedure Part2 (after the raspery pi been connected to the network)
 
 ## Step 1 - Prepare installation ##
-The purpose of the preparation is to copy all scripts in this repository to your raspberry pi.
-One way to do that is to copy the scripts to your SD card, directly after flashing the raspberian image. This works quite good when using Windows for flashing the Raspi Lite Image to your USB.
+The purpose of the preparation is to copy all scripts in this repository to your Raspberry Pi.
+One way to do that is to copy the scripts to your SD card, directly after flashing the Raspbian image. This works quite good when using Windows for flashing the Raspi Lite Image to your USB.
 
 ### Windows ###
-* Download rasperian light image from the internet
-* Use Win32Imager to flash the image to your SD card
+* Download Raspbian Light image from the internet (https://www.raspberrypi.org/downloads/raspbian/)
+* Use Win32Imager (https://sourceforge.net/projects/win32diskimager/) to flash the image to your SD card
 After the SD-card has been successfully written: 
 * Unplug the SD-Card and replug it again. This triggers Windows to mount all partitions on the SD card. Most of them don't work anyway and that´s ok at this point. Most important is, that the /boot partition will be mounted and accessable through your windows explorer.
 * Open your Windows Explorer and navigate to the /boot Volume of your SD-card. 
@@ -50,7 +50,7 @@ To do this you just have to execute the scripts in the prepared order starting w
 The last script is called 99-functions.sh and should not be executed explicitly (though it does not do any harm). It contains a set of functions that is used by the other scripts.
 
 ### Overview over the whole procedure ###
-* Boot your raspi
+* Boot your Raspberry Pi
 * Login as user 'pi' with password 'raspberry' (attention: there will be an english keyboard layout at the beginning)
 * Change to root user (e.g. sudo bash -o vi)
 * Copy the scripts from /boot/ic880a_setup to /root/
@@ -62,7 +62,7 @@ e.g. cp -r /boot/ic880a_setup /root
   * 03-setup-user.sh
   * 04-install-add-packages.sh
   * 05-setup-packetforwarder.sh
-* While doing this you need to reboot the raspi several times as prompted by the dialogs
+* While doing this you need to reboot the raspi several times as prompted by the dialogues
 
 ### 01-setup-connectivity.sh ###
 This script is executed when you do not even have a network connection.
@@ -584,7 +584,7 @@ root@ttn-kaiserallee:~/ic880a_setup#
 ```
 
 ### Register your gateway ###
-As with every gateway you need to register it at https://console.thethingsnetwork.org.
+You need to register your new Gateway at The Things Network Console: https://console.thethingsnetwork.org.
 
 ## List of files & Documentation 
 
