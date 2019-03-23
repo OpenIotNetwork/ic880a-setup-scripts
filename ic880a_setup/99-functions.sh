@@ -92,7 +92,7 @@ function are_you_sure()
 function do_reboot() 
 {
 	if (whiptail --backtitle "At this point we suggest a reboot." --title "A reboot is needed." --yesno "Do you want to reboot now?" ${r} ${c}) then
-		echo "Reboot in 5 seconds. Press Contro-C to abort."
+		echo "Reboot in 5 seconds. Press Control-C to abort."
 		sleep 5
 		reboot
 	else
