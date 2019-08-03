@@ -20,8 +20,8 @@ apt-get install mtr-tiny --yes || die "mtr-tiny installation failed" 1
 apt-get install ntp --yes || die "ntp installation failed" 1
 
 # Deinstall physical swap
-systemctl disable dphys-swapfile
-# remove only if package is installed
+# disable and remove only if package is installed
+dpkg -s dphys-swapfile && systemctl disable dphys-swapfile
 dpkg -s dphys-swapfile && apt-get purge dphys-swapfile --yes
 
 # Cleanup
