@@ -15,7 +15,7 @@ is_root || die "You need to be root to run this script."
 # Check if SPI is configured
 if [ `lsmod | grep -i spi | wc -l` -lt 1 ]
 then
-        echo "Achtung: SPI ist nicht konfiguriert!"
+        echo "SPI is not configured! Did you reboot after enabling SPI? Exiting."
         exit 1
 fi
 
