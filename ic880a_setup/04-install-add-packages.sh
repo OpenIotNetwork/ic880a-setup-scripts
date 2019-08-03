@@ -21,7 +21,8 @@ apt-get install ntp --yes || die "ntp installation failed" 1
 
 # Deinstall physical swap
 systemctl disable dphys-swapfile
-apt-get purge dphys-swapfile --yes || die "Deactivating SWAP Failed." 1
+# remove only if package is installed
+dpkg -s dphys-swapfile && apt-get purge dphys-swapfile --yes
 
 # Cleanup
 apt-get autoremove --yes || die "Cleanup failed" 1
